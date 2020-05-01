@@ -10,7 +10,7 @@ window.onload = function blacklist_json () {
     request.send(null);
     request.onload = function() {
         if (request.status == 200) {
-            json = JSON.parse(request.responseText);
+            json = eval(JSON.parse(request.responseText));
             }
         }
     }
@@ -28,7 +28,7 @@ function search() {
             
             case '0':
             case 'test':
-                array = JSON.parse(json); document.getElementById("ban").innerHTML = "<b><font color='SpringGreen'>查询成功！</font></b>" + "<br>" + "<b>BAN ID:</b>" + array.blacklist[0].id + "<br>" + "<b>QQ号:</b>" + array.blacklist[0].qq + "<br>" + "<b>记录日期:</b>" + array.blacklist[0].date + "<br>" + "<b>有效期至:</b>" + array.blacklist[0].validity + "<br>" + "<b>云黑名单等级:</b>" + array.blacklist[0].level + "<br>" + "<b>事件记录:</b>" + array.blacklist[0].note + "<font color='red'><b>【重度违规，建议提高警惕】</b></font>" + "<br>" + "<b>证实情况:</b>" + array.blacklist[0].confirm + "<br>" + "<b>证据链接:</b>" + array.blacklist[0].evidence + "<br>" + "<b>查询结果来自:</b>" + array.blacklist[0].from;
+                obj = JSON.parse(json); document.getElementById("ban").innerHTML = "<b><font color='SpringGreen'>查询成功！</font></b>" + "<br>" + "<b>BAN ID:</b>" + obj.blacklist[0].id + "<br>" + "<b>QQ号:</b>" + obj.blacklist[0].qq + "<br>" + "<b>记录日期:</b>" + obj.blacklist[0].date + "<br>" + "<b>有效期至:</b>" + obj.blacklist[0].validity + "<br>" + "<b>云黑名单等级:</b>" + obj.blacklist[0].level + "<br>" + "<b>事件记录:</b>" + obj.blacklist[0].note + "<font color='red'><b>【重度违规，建议提高警惕】</b></font>" + "<br>" + "<b>证实情况:</b>" + obj.blacklist[0].confirm + "<br>" + "<b>证据链接:</b>" + obj.blacklist[0].evidence + "<br>" + "<b>查询结果来自:</b>" + obj.blacklist[0].from;
                 break;
 
             default:
