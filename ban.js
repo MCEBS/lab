@@ -3,14 +3,10 @@
 
 function search() {
     
-    var search_value = document.getElementById('ebsban').value;
-    document.getElementById("ban").innerHTML ="<font color='red'><b>查询失败！</b></font>请检查您输入的信息是否正确或者该信息从未录入。";
-   
-    
-    // data.json 数据库
+    var search_value = document.getElementById('ban').value;
 
-    var Box = document.getElementById("box")
-    var json
+    document.getElementById("ban").innerHTML ="<font color='red'><b>查询失败！</b></font>请检查您输入的信息是否正确或者该信息从未录入。";
+
     window.onload = function() {
         var url = "blacklist.json"
         var request = new XMLHttpRequest();
@@ -19,28 +15,16 @@ function search() {
         request.onload = function() {
             if (request.status == 200) {
                 json = JSON.parse(request.responseText);
-                showData(json)
             }
         }
     }
 
-    function showData(data) {
-        for (let i = 0; i < json.games.length; i++) {
-            var gameName = json.games[i].name
-            console.log(gameName);
-            var p = document.createElement("p")
-            p.innerHTML = gameName
-            Box.appendChild(p)
-        }
-    }
-
-    // 云端黑名单总控系统
-    switch(search_value) {
+    switch (search_value) {
             
         case '0':
         case 'test':
-            obj = JSON.parse(text); 
-            document.getElementById("ban").innerHTML = "<b><font color='SpringGreen'>查询成功！</font></b>" + "<br>" + "<b>BAN ID:</b>" + obj.blacklist[0].id + "<br>" + "<b>QQ号:</b>" + obj.blacklist[0].qq + "<br>" + "<b>记录日期:</b>" + obj.blacklist[0].date + "<br>" + "<b>有效期至:</b>" + obj.blacklist[0].validity + "<br>" + "<b>云黑名单等级:</b>" + obj.blacklist[0].level + "<br>" + "<b>事件记录:</b>" + obj.blacklist[0].note + "<font color='red'><b>【重度违规，建议提高警惕】</b></font>" + "<br>" + "<b>证实情况:</b>" + obj.blacklist[0].confirm + "<br>" + "<b>证据链接:</b>" + obj.blacklist[0].evidence + "<br>" + "<b>查询结果来自:</b>" + obj.blacklist[0].from;
+            json = JSON.parse(request.responseText)
+            document.getElementById("ban").innerHTML = "<b><font color='SpringGreen'>查询成功！</font></b>" + "<br>" + "<b>BAN ID:</b>" + json.blacklist[0].id + "<br>" + "<b>QQ号:</b>" + json.blacklist[0].qq + "<br>" + "<b>记录日期:</b>" + json.blacklist[0].date + "<br>" + "<b>有效期至:</b>" + json.blacklist[0].validity + "<br>" + "<b>云黑名单等级:</b>" + json.blacklist[0].level + "<br>" + "<b>事件记录:</b>" + json.blacklist[0].note + "<font color='red'><b>【重度违规，建议提高警惕】</b></font>" + "<br>" + "<b>证实情况:</b>" + json.blacklist[0].confirm + "<br>" + "<b>证据链接:</b>" + json.blacklist[0].evidence + "<br>" + "<b>查询结果来自:</b>" + json.blacklist[0].from;
             break;
             
     }
