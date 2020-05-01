@@ -9,7 +9,8 @@ function search() {
     
     // data.json 数据库
 
-
+    var Box = document.getElementById("box")
+    var json
     window.onload = function() {
         var url = "blacklist.json"
         var request = new XMLHttpRequest();
@@ -17,15 +18,22 @@ function search() {
         request.send(null);
         request.onload = function() {
             if (request.status == 200) {
-                var text = JSON.parse(request.responseText);
+                json = JSON.parse(request.responseText);
+                showData(json)
             }
         }
     }
-    setTimeout(function() { 
-        console.log(text);
-    }, 1000)
 
-    
+    function showData(data) {
+        for (let i = 0; i < json.games.length; i++) {
+            var gameName = json.games[i].name
+            console.log(gameName);
+            var p = document.createElement("p")
+            p.innerHTML = gameName
+            Box.appendChild(p)
+        }
+    }
+
     // 云端黑名单总控系统
     switch(search_value) {
             
