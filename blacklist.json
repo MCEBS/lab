@@ -30,3 +30,98 @@
     }
   ]
 }
+
+{
+	"blacklist": [{
+			"state": "success",
+			"id": "0",
+			"qq": "test",
+			"date": "2020-02-19 21:17:30",
+			"validity": "2099-12-31 21:17:30",
+			"level": "3(high)",
+			"note": "恶意盗用别工作室网站数据库，态度恶劣。",
+			"confirm": "众裁证实/云黑证实/证据证实",
+			"evidence": "https://ban.mcebs.cc",
+			"from": "MCEBS",
+			"remark": ""
+		},
+		{
+			"state": "success",
+			"id": "1",
+			"qq": "2284307252",
+			"date": "2020-02-14 11:39:56",
+			"validity": "未提供",
+			"level": "3(high)",
+			"note": "侮辱国家。",
+			"confirm": "未提供",
+			"evidence": "",
+			"from": "Studio Ban",
+			"remark": ""
+		},
+		{
+			"state": "success",
+			"id": "2",
+			"qq": "2863221725",
+			"date": "2020-02-15 14:18:54",
+			"validity": "未提供",
+			"level": "2(Middle)",
+			"note": "嘴臭骂人",
+			"confirm": "未提供",
+			"evidence": "",
+			"from": "Studio Ban",
+			"remark": ""
+		},
+		{
+			"state": "success",
+			"id": "3",
+			"qq": "1335418365",
+			"date": "2020-02-15 14:19:04",
+			"validity": "未提供",
+			"level": "2(Middle)",
+			"note": "嘴臭骂人",
+			"confirm": "未提供",
+			"evidence": "",
+			"from": "Studio Ban",
+			"remark": ""
+		},
+		{
+			"state": "success",
+			"id": "4",
+			"qq": "2114596057",
+			"date": "2020-02-17 22:44:30",
+			"validity": "未提供",
+			"level": "3(high)",
+			"note": "此服务器（539731937）找建筑师定制建筑，建筑师提交作品之后，被此服务器的人指指点点，并且也没有说标准是什么，然后对建筑师进行了辱骂。根据澡堂规定，此建筑进度已满足700元规模，由长治、晓七认证其作品已达1000元，但对方终止了交易，并且要求退还押金，退还后却对建筑师进行辱骂。",
+			"confirm": "未提供",
+			"evidence": "",
+			"from": "Studio Ban",
+			"remark": ""
+		},
+		{
+			"state": "success",
+			"id": "5",
+			"qq": "915276728",
+			"date": "2020-02-17 22:45:53",
+			"validity": "未提供",
+			"level": "1(low)",
+			"note": "服务器（539731937）的成员冒充国建成员。",
+			"confirm": "未提供",
+			"evidence": "",
+			"from": "Studio Ban",
+			"remark": ""
+		},
+		{
+			"state": "success",
+			"id": "6",
+			"qq": "774746052",
+			"date": "2020-02-24 17:35:29",
+			"validity": "未提供",
+			"level": "3(high)",
+			"note": "来自受害者的描述：对方原本要我们帮他改端，但是出价不符合市场价格，弄好之后就开始骂人，还说技术是假的，并且拿云黑警告。",
+			"confirm": "未提供",
+			"evidence": "http://api.sban.xyz/index.php/archives/16/",
+			"from": "Studio Ban",
+			"remark": ""
+		}
+]
+}

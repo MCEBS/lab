@@ -3,14 +3,56 @@
     <head>
         <title>EBSBAN云端黑名单</title>
     </head>
-    <body>
-        <script type="text/javascript" src="ban.js"></script>
-        <div>
-            <input class="form-control" input type="text" id="ebsban" placeholder="请在此处键入您要查询的QQ号或BAN ID.">
-            <input type="button" onClick="search()" value="查询"></button>
-        </div>
-        <div>
-            <p id="ban"></p>
-        </div>
-    </body>
-</html>
+    <script>
+
+        var Box = document.getElementById("box")
+    
+        var json
+    
+    
+        window.onload = function() {
+    
+            var url = "blacklist.json"
+    
+            var request = new XMLHttpRequest();
+    
+            request.open("get", url);
+    
+            request.send(null);
+    
+            request.onload = function() {
+    
+                if (request.status == 200) {
+    
+                    json = JSON.parse(request.responseText);
+    
+                    showData(json)
+    
+                }
+    
+            }
+    
+        }
+    
+    
+        function showData(data) {
+    
+            for (let i = 0; i < json.games.length; i++) {
+    
+                var gameName = json.games[i].name
+    
+                console.log(gameName);
+    
+                var p = document.createElement("p")
+    
+                p.innerHTML = gameName
+    
+                Box.appendChild(p)
+    
+            }
+    
+        }
+    
+    </script>
+    
+    </html>
