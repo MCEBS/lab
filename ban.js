@@ -1,8 +1,6 @@
 ﻿/* EBSBAN·云端黑名单系统 */
 /* Copyright (C) 2020 MCEBS & fly6022 All right reserved. */
 
-var json
-
 window.onload = function blacklist_json () {
     var url = "blacklist.json"
     var request = new XMLHttpRequest();
