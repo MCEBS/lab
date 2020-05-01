@@ -15,6 +15,11 @@ window.onload = function blacklist_json () {
         }
     }
 
+    setTimeout(function() {
+    console.log(json);
+    }, 1000)
+
+
 function search() {
     
     search_value = document.getElementById('ebsban').value;
