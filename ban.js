@@ -11,18 +11,9 @@ window.onload = function blacklist_json () {
     request.onload = function() {
         if (request.status == 200) {
             json = eval(JSON.parse(request.responseText));
-            for (let i = 0; i < json.blacklist.length; i++) {
-                id = json.blacklist[i].id
-                console.log(id); 
-                }
             }
         }
     }
-
-    setTimeout(function() {
-    console.log(json);
-    }, 1000)
-
 
 function search() {
     
@@ -44,3 +35,5 @@ function search() {
 // 统计插件
 
 document.write ('<script type="text/javascript" src="https://js.users.51.la/19873803.js"></script>');
+
+console.log("EBSBAN done.");
