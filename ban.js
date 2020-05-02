@@ -13,7 +13,7 @@ window.onload = function blacklist_json () {
             json = eval(JSON.parse(request.responseText));
             for (let i = 0; i < json.blacklist.length; i++) {
                 id = json.blacklist[i].id
-                console.log(gameName); 
+                console.log(id); 
                 }
             }
         }
