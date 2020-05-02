@@ -1,6 +1,8 @@
 ﻿/* EBSBAN·云端黑名单系统 */
 /* Copyright (C) 2020 MCEBS & fly6022 All right reserved. */
 
+search_value = document.getElementById('ebsban').value;
+
 var json
 
 window.onload = function blacklist_json () {
@@ -11,7 +13,7 @@ window.onload = function blacklist_json () {
     request.onload = function() {
         if (request.status == 200) {
             json = eval(JSON.parse(request.responseText));
-            for (let i = 0; i < json.blacklist.length; i++) {
+            for (let i = search_value) {
                 id = json.blacklist[i].id
                 console.log(id); 
                 }
@@ -25,8 +27,6 @@ window.onload = function blacklist_json () {
 
 
 function search() {
-    
-    search_value = document.getElementById('ebsban').value;
 
     switch (search_value) {
             
