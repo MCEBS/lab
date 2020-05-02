@@ -11,6 +11,13 @@ window.onload = function blacklist_json () {
     request.onload = function() {
         if (request.status == 200) {
             json = eval(JSON.parse(request.responseText));
+            for (let i = 0; i < json.games.length; i++) {
+                var gameName = json.games[i].name
+                console.log(gameName);
+                var p = document.createElement("p")
+                p.innerHTML = gameName
+                Box.appendChild(p) 
+            }
             }
         }
     }
