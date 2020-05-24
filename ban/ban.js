@@ -2,8 +2,6 @@
 /* Github：https://github.com/MCEBS/EBSBAN MCEBS官方网站：https://mcebs.cc/ 云端黑名单官方网站：https://ban.mcebs.cc/ */
 /* 版本号：v1.0.0  更新日期：2020年5月24日 制作者：fly6022 (https://fly6022.fun/) */
 
-var json
-
 window.onload = function blacklist_json () {
     var url = "/ban/blacklist.json"
     var request = new XMLHttpRequest();
