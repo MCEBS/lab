@@ -2,6 +2,8 @@
 /* Github：https://github.com/MCEBS/EBSBAN MCEBS官方网站：https://mcebs.cc/ 云端黑名单官方网站：https://ban.mcebs.cc/ */
 /* 版本号：v1.0.0  更新日期：2020年5月24日 制作者：fly6022 (https://fly6022.fun/) */
 
+var json
+
 window.onload = function blacklist_json () {
     var url = "/ban/blacklist.json"
     var request = new XMLHttpRequest();
@@ -22,7 +24,7 @@ function search() {
             
             case '0':
             case 'test':
-                document.getElementById("ban").innerHTML = `<b><font color='SpringGreen'>查询成功！</font></b><br><b>BAN ID:</b>${json.EBSBAN.blacklist_1[0].id}<br><b>QQ号:</b>${json.EBSBAN.blacklist_1[0].qq}<br><b>记录日期:</b>${json.EBSBAN.blacklist_1[0].date}<br><b>有效期至:</b>${json.EBSBAN.blacklist_1[0].validity}<br><b>云黑名单等级:</b>${json.EBSBAN.blacklist_1[0].level}<br><b>事件记录:</b>${json.EBSBAN.blacklist_1[0].note}<font color='red'><b>【重度违规，建议提高警惕】</b></font><br><b>证实情况:</b>${json.EBSBAN.blacklist_1[0].confirm}<br><b>证据链接:</b>${json.EBSBAN.blacklist_1[0].evidence}<br><b>查询结果来自:</b>${json.EBSBAN.blacklist_1[0].from}<br><b>备注:</b>${json.EBSBAN.blacklist_1[0].remark}<br><b>数据源哈希值</b>：${json.EBSBAN.blacklist_1[0].hash}`;
+                document.getElementById("ban").innerHTML = "<b><font color='SpringGreen'>查询成功！</font></b>" + "<br>" + "<b>BAN ID:</b>" + json.EBSBAN.blacklist_1[0].id + "<br>" + "<b>QQ号:</b>" + json.EBSBAN.blacklist_1[0].qq + "<br>" + "<b>记录日期:</b>" + json.EBSBAN.blacklist_1[0].date + "<br>" + "<b>有效期至:</b>" + json.EBSBAN.blacklist_1[0].validity + "<br>" + "<b>云黑名单等级:</b>" + json.EBSBAN.blacklist_1[0].level + "<br>" + "<b>事件记录:</b>" + json.EBSBAN.blacklist_1[0].note + "<font color='red'><b>【重度违规，建议提高警惕】</b></font>" + "<br>" + "<b>证实情况:</b>" + json.EBSBAN.blacklist_1[0].confirm + "<br>" + "<b>证据链接:</b>" + json.EBSBAN.blacklist_1[0].evidence + "<br>" + "<b>查询结果来自:</b>" + json.EBSBAN.blacklist_1[0].from + "<br>" + "<b>备注:</b>" + json.EBSBAN.blacklist_1[0].remark + "<br>" + "<b>数据源哈希值</b>：" + json.EBSBAN.blacklist_1[0].hash;
                 break;
 
             default:
