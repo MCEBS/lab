@@ -2,12 +2,12 @@
   "EBSBAN": [ 
      {
        "data": [
-         {
+      {
          "blacklist_num": "1",
          "blacklist_change": "0",
          "change_date": "2020-5-24 8:53:06"
-         }
-      ]
+      }
+    ]
     },
     {
       "blacklist_1": [ 
