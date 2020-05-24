@@ -33,10 +33,4 @@ function search() {
 
 document.write ('<script type="text/javascript" src="https://js.users.51.la/19873803.js"></script>');
 
-document.getElementById("blacklist_num").innerHTML = json.EBSBAN.data[0].blacklist_num;
-
-document.getElementById("blacklist_change").innerHTML = json.EBSBAN.data[0].blacklist_change;
-
-document.getElementById("change_date").innerHTML = json.EBSBAN.data[0].change_date;
-
 console.log("EBSBAN done.");
